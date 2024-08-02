@@ -1,18 +1,1 @@
-{
-    "accounts": [
-        {
-            "username": "mayank",
-            "password": "mayank1234",
-            "savings": 0,
-            "earnings": 0,
-            "expenditure": 0
-        },
-        {
-            "username": "ram",
-            "password": "ram69",
-            "savings": 0,
-            "earnings": 0,
-            "expenditure": 0
-        }
-    ]
-}
+{"accounts": [{"username": "mayank", "password": "mayank1234", "savings": 0, "earnings": 0, "expenditure": 0}, {"username": "shyam", "password": "shyam1234", "savings": 0.0, "earnings": 0, "expenditure": 0}]}

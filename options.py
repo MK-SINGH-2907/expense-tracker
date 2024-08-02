@@ -5,18 +5,22 @@ import json
 def signup():
     while True:
         try:
-            data = json.load(open("details.json", "r+"))
+            data = json.load(open("details.json"))
             uname = input("Enter username: ")
             pwd = input("Enter password: ")
             sav = float(input("Enter savings(if any): "))
+            found = False
             for user in data["accounts"]:
                 if user["username"] == uname:
-                    print("Username Already taken!! Use another username")
-                else:
-                    data = data["accounts"].append({"username": uname, "password": pwd, "savings": sav, "earnings": 0, "expenditure": 0})
-                    with open("details.json", "w+") as f:
-                        json.dump(data, f)
+                    found = True
+                    break
+            if not found:
+                data["accounts"].append({"username": uname, "password": pwd, "savings": sav, "earnings": 0, "expenditure": 0})
+                with open("details.json", "w+") as f:
+                    json.dump(data, f)
                     exit()
+            else:
+                print("Oops! Username already taken!")
         except ValueError:
             print("Enter a number")
         except Exception as e:
