@@ -1,13 +1,14 @@
 #features
 
 import json
+import maskpass
 
 def signup():
     while True:
         try:
             data = json.load(open("details.json"))
             uname = input("Enter username: ")
-            pwd = input("Enter password: ")
+            pwd = maskpass.askpass("Enter password: ", mask="*")
             sav = float(input("Enter savings(if any): "))
             found = False
             for user in data["accounts"]:
