@@ -1,0 +1,18 @@
+{
+    "accounts": [
+        {
+            "username": "mayank",
+            "password": "mayank1234",
+            "savings": 0,
+            "earnings": 0,
+            "expenditure": 0
+        },
+        {
+            "username": "ram",
+            "password": "ram69",
+            "savings": 0,
+            "earnings": 0,
+            "expenditure": 0
+        }
+    ]
+}
