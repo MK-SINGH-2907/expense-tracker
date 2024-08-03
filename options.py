@@ -41,6 +41,7 @@ def login():
             if found:
                 print("\t Logged in!!")
                 menu(uname, pwd)
+                exit()
         except Exception as e:
             print(f"Oops! Error: {e}")
 
